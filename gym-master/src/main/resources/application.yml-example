@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/gym?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE
+    username: root
+    password: somePassword
+    initialization-mode: always
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+#      ddl-auto: none
+#      ddl-auto: validate
+      ddl-auto: update
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+    time-zone: Asia/Shanghai
+app:
+  jwt:
+    secret: 2d78e85e72727c81128e9bd098457ac2a68644ae43731c59cc21fd9deb780e81bbe1fbd0372ac583e707cb94dd8c579db37d9424a04af048729566e5433718f6
+    expiration: 3600000
